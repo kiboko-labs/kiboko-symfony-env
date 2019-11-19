@@ -1,0 +1,30 @@
+html, body {
+    width: 240px;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    margin: 3% auto;
+    padding: 4px;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.logo {
+    background-color: #E5F2F2;
+}
+
+.logo:hover {
+    background-color: #CFF2F2;
+}
+
+.reset {
+    background-color: #FBFBC9;
+}
+
+.reset:hover {
+    background-color: #EAEA9D;
+}

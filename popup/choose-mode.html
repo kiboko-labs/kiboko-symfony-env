@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose-mode.css"/>
+</head>
+<body>
+<div id="popup-content">
+    <div class="button env" data-env="prod"><img src="../icons/symfony.svg" alt="Prod" width="36" /> Prod</div>
+    <div class="button env" data-env="dev"><img src="../icons/symfony-dev.svg" alt="Dev" width="36" /> Dev</div>
+    <div class="button env" data-env="xdebug"><img src="../icons/symfony-xdebug.svg" alt="Dev + Xdebug" width="36" /> Dev + Xdebug</div>
+</div>
+<div id="error-content" class="hidden">
+    <p>Can't use Web Stack on this web page.</p><p>Try a different page.</p>
+</div>
+<script src="choose-mode.js"></script>
+</body>
+</html>

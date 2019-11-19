@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Symfony Environment",
+  "version": "1.0",
+  "description": "Change your symfony environment.",
+  "icons": {
+    "32": "icons/symfony.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "webRequestBlocking",
+    "webRequest",
+    "*://*.develop/*",
+    "*://*.local/*",
+    "*://localhost/*"
+  ],
+  "background": {
+    "scripts": [
+      "app.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/symfony.png",
+    "default_title": "Symfony Environment",
+    "default_popup": "popup/choose-mode.html"
+  },
+  "web_accessible_resources": [
+    "icons/symfony.png",
+    "icons/symfony-dev.png",
+    "icons/symfony-xdebug.png"
+  ]
+}
