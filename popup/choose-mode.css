@@ -1,5 +1,5 @@
 html, body {
-    width: 240px;
+    width: 220px;
 }
 
 .hidden {
@@ -9,8 +9,22 @@ html, body {
 .button {
     margin: 3% auto;
     padding: 4px;
-    font-size: 2.5em;
+    font-size: 36px;
     cursor: pointer;
+    font-family: monospace;
+}
+
+.button code {
+    color: #cc668b;
+}
+
+.env.active {
+    background: #FFE6EF;
+}
+
+.button img {
+    width: 32px;
+    margin-right: 5px;
 }
 
 .logo {

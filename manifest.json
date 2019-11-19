@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Symfony Environment",
+  "name": "Symfony Environment Switcher",
   "version": "1.0",
-  "description": "Change your symfony environment.",
+  "description": "Switch between your symfony environments.",
   "icons": {
     "32": "icons/symfony.svg"
   },
@@ -21,7 +21,7 @@
   },
   "browser_action": {
     "default_icon": "icons/symfony.png",
-    "default_title": "Symfony Environment",
+    "default_title": "Symfony Environment Switcher",
     "default_popup": "popup/choose-mode.html"
   },
   "web_accessible_resources": [
