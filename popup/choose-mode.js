@@ -2,6 +2,8 @@ document.querySelectorAll('#popup-content > .env').forEach(element => {
     element.addEventListener('click', (event) => {
         let env = event.target.closest('#popup-content > .env').dataset.env;
 
+        var browser = browser || chrome;
+
         browser.runtime.sendMessage({'env': env});
 
         switch (env) {
