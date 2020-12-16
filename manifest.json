@@ -7,6 +7,7 @@
     "32": "icons/symfony.svg"
   },
   "permissions": [
+    "storage",
     "activeTab",
     "webRequestBlocking",
     "webRequest",
@@ -28,5 +29,9 @@
     "icons/symfony.png",
     "icons/symfony-dev.png",
     "icons/symfony-xdebug.png"
-  ]
+  ],
+  "options_ui": {
+    "page": "settings/settings.html",
+    "open_in_tab": true
+  }
 }
