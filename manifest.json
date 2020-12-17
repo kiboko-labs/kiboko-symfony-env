@@ -7,7 +7,7 @@
     "32": "icons/symfony.svg"
   },
   "permissions": [
-    "*://*",
+    "<all_urls>",
     "storage",
     "activeTab",
     "webRequestBlocking",
