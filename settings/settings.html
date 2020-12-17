@@ -8,28 +8,35 @@
 
     <title>Symfony Environment Switcher | Settings</title>
     <style>
+        form {
+            width: 100%;
+        }
         .form-row {
             display: flex;
             flex-direction: row;
+            margin-top: 20px;
             margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1 class="my-3">Settings</h1>
+    <h1>Settings</h1>
     <form id="form" method="post">
         <div class="form-row">
             <div class="col">
                 <input type="text" name="title" id="title" class="form-control" placeholder="Your url" required/>
             </div>
             <div class="col">
-                <button class="btn btn-success" type="submit" id="form-save">Add url</button>
+                <button type="submit" id="form-save">Add url</button>
             </div>
         </div>
     </form>
-    <table class="table table-bordered my-3">
-        <thead class="thead-light">
+    <table>
+        <thead>
         <tr>
             <th scope="col">Urls</th>
             <th scope="col">Options</th>
