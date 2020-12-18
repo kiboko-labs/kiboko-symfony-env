@@ -10,7 +10,17 @@ browser.runtime.onStartup.addListener((browser) => {
     browser.runtime.sendMessage({"env": env});
 });
 
-let urls = JSON.parse(localStorage.getItem('urls'));
+if (!localStorage.getItem('urls')) {
+    urls = [
+        "*://*.develop/*",
+        "*://*.local/*",
+        "*://localhost/*"
+    ];
+    localStorage.setItem('urls', JSON.stringify(urls))
+} else {
+    urls = JSON.parse(localStorage.getItem('urls'));
+}
+
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     details => {
