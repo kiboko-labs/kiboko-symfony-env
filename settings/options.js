@@ -1,5 +1,7 @@
 const body = document.getElementById('urls');
 
+var browser = browser || chrome;
+
 if(!localStorage.getItem('urls')){
     const urls = [
         "*://*.develop/*",
@@ -60,3 +62,8 @@ function deleteURL(url) {
         fetchAll();
         document.location.reload();
 }
+
+document.getElementById("reload").addEventListener("click", function () {
+    browser.runtime.reload();
+    window.close();
+});
