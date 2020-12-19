@@ -7,12 +7,11 @@
     "32": "icons/symfony.svg"
   },
   "permissions": [
+    "<all_urls>",
+    "storage",
     "activeTab",
     "webRequestBlocking",
-    "webRequest",
-    "*://*.develop/*",
-    "*://*.local/*",
-    "*://localhost/*"
+    "webRequest"
   ],
   "background": {
     "scripts": [
@@ -28,5 +27,9 @@
     "icons/symfony.png",
     "icons/symfony-dev.png",
     "icons/symfony-xdebug.png"
-  ]
+  ],
+  "options_ui": {
+    "page": "settings/settings.html",
+    "open_in_tab": false
+  }
 }

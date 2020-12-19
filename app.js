@@ -10,6 +10,18 @@ browser.runtime.onStartup.addListener((browser) => {
     browser.runtime.sendMessage({"env": env});
 });
 
+if (!localStorage.getItem('urls')) {
+    urls = [
+        "*://*.develop/*",
+        "*://*.local/*",
+        "*://localhost/*"
+    ];
+    localStorage.setItem('urls', JSON.stringify(urls))
+} else {
+    urls = JSON.parse(localStorage.getItem('urls'));
+}
+
+
 browser.webRequest.onBeforeSendHeaders.addListener(
     details => {
         let requestHeaders = details.requestHeaders || [];
@@ -23,15 +35,10 @@ browser.webRequest.onBeforeSendHeaders.addListener(
         };
     },
     {
-        urls: [
-            "*://*.develop/*",
-            "*://*.local/*",
-            "*://localhost/*"
-        ]
+        urls: urls
     },
     [
         'requestHeaders',
         'blocking'
     ]
 );
-
